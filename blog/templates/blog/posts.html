@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+
+<h1 style="text-align: center;">Blog</h1>
+
+{% block content %}
+    {% for post in posts %}
+    <div class="post">
+        <div class="title">
+            <a href="{% url 'blog:view_post' post.id %}">{{ post.title }}</a>
+            <span style="font-size: 14px;">{{ post.views_count }}</span>
+        </div>
+        <div class="text">{{ post.text }}</div>
+    </div>
+    {% endfor %}
+{% endblock %}

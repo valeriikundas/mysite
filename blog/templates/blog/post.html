@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+
+<div class="post">
+    <div class="title">
+        {{ post.title }}
+        <span style="font-size: 14px;">{{ post.views_count }}</span>
+    </div>
+    <div class="text">{{ post.text }}</div>
+</div>

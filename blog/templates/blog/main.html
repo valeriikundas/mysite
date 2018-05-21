@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+
+<ul class="menu">
+    <li>
+        <a href="{% url 'blog:posts' %}">Posts</a>
+    </li>
+    <li>
+        <a href="{% url 'blog:about' %}">About</a>
+    </li>
+</ul>
