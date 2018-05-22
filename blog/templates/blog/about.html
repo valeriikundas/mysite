@@ -1,9 +1,18 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+{% extends "base.html" %}
 
+{% block title %}About me{% endblock %}
+
+{% block content %}
 <div class="me">
     <h2>Valeriy Kundas</h2>
     <div>Human</div>
     <div>Programmer</div>
     <div>Environmentalist</div>
+    <br>
+    <div>
+        <span>valeriykundas@gmail.com</span>
+        <a href="https://github.com/valeriykundas">github</a>
+        <span>+38-(050)-805-74-00</span>
+    </div>
 </div>
+{% endblock %}

@@ -1,8 +1,4 @@
-{% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
-
-<h1 style="text-align: center;">Blog</h1>
+{% extends "base.html" %}
 
 {% block content %}
     {% for post in posts %}

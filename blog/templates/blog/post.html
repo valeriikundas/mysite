@@ -1,7 +1,8 @@
-{% load static %}
+{% extends "base.html" %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+{% block title %}{{ post.title }} - Valeriy Kundas{% endblock %}
 
+{% block content %}
 <div class="post">
     <div class="title">
         {{ post.title }}
@@ -9,3 +10,4 @@
     </div>
     <div class="text">{{ post.text }}</div>
 </div>
+{% endblock %}
