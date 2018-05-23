@@ -7,7 +7,11 @@
 {% block content %}
 <ul class="menu startmenu">
     <li class="menu-item">
-        <a href="{% url 'blog:posts' %}" >Posts</a>
+        <a href="/">Projects</a>
+        <!-- "{ % url 'blog.projects' % }" -->
+    </li>
+    <li class="menu-item">
+        <a href="{% url 'blog:posts' %}">Posts</a>
     </li>
     <li class="menu-item">
         <a href="{% url 'blog:about' %}">About</a>
