@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}{{ post.title }} - Valeriy Kundas{% endblock %}
+{% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
 <div class="post">
     <div class="title">
         {{ post.title }}
-        <span style="font-size: 14px;">{{ post.views_count }}</span>
+        <span>{{ post.views_count }}</span>
     </div>
-    <div class="text">{{ post.text }}</div>
+    <div class="text">
+        {{ post.text }}
+    </div>
 </div>
 {% endblock %}

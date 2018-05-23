@@ -1,11 +1,16 @@
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+{% extends "base.html" %}
 
-<ul class="menu">
-    <li>
-        <a href="{% url 'blog:posts' %}">Posts</a>
+{% block title %}Hello!{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+<ul class="menu startmenu">
+    <li class="menu-item">
+        <a href="{% url 'blog:posts' %}" >Posts</a>
     </li>
-    <li>
+    <li class="menu-item">
         <a href="{% url 'blog:about' %}">About</a>
     </li>
 </ul>
+{% endblock %}

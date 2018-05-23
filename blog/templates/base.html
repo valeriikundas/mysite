@@ -3,26 +3,28 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% block title %}Valeriy Kundas{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
 </head>
 <body>
     {% block header %}
-    <ul>
-        <li>
-            <a href="{% url 'blog:posts' %}">Posts</a>
-        </li>
-        <li>
-            <a href="{% url 'blog:about' %}">About</a>
-        </li>
-    </ul>
+    <div class="header">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="{% url 'blog:posts' %}">Posts</a>
+            </li>
+            <li class="menu-item">
+                <a href="{% url 'blog:about' %}">About</a>
+            </li>
+        </ul>
+    </div>
     {% endblock %}
 
     {% block content %}{% endblock %}
-    {% block footer %}footer{% endblock %}
+
+    {% block footer %}{% endblock %}
 </body>
 </html>
