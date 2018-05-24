@@ -3,24 +3,10 @@
 {% block title %}Posts{% endblock %}
 
 {% block content %}
-<div class="content" style="display: flex">
-    <div class="leftblock" style="flex: 20%; text-align: end; background-color: green;">
-        <ul>
-            <li>first</li>
-            <li>second</li>
-            <li>third</li>
-        </ul>
+    {% for post in posts %}
+    <div class="post">
+        <h4 class="title"><a href="{% url 'blog:post' post.id %}">{{ post.title }}</a></h4>
+        <div class="text">{{ post.text }}</div>
     </div>
-
-    <div class="centerblock style="">
-        {% for post in posts %}
-        <div class="post">
-            <div class="title">
-                <a href="{% url 'blog:view_post' post.id %}">{{ post.title }}</a>
-            </div>
-            <div class="text">{{ post.text }}</div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+    {% endfor %}
 {% endblock %}

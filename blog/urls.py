@@ -5,8 +5,9 @@ from . import views
 app_name = 'blog'
 urlpatterns = [
     path('bootstrap/', views.bootstrap, name='bootstrap'),
-    path('blog/', views.posts, name='posts'),
     path('about/', views.about, name='about'),
-    path('view/<int:post_id>', views.view_post, name='view_post'),
+    path('projects/', views.projects, name='projects'),
+    path('posts/', views.posts, name='posts'),
+    path('view/<int:post_id>', views.post, name='post'),
     path('', views.main, name='main'),
 ]
