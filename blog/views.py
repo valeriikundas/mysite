@@ -21,3 +21,6 @@ def main(request):
 def view_post(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     return render(request, "blog/post.html", {'post': post})
+
+def bootstrap(request):
+    return render(request, 'blog/bootstrap.html', {})
