@@ -16,15 +16,12 @@
   <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet"> 
+  
+   <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet">
+  {% block custom_head %}{% endblock %}
 
-  <!-- my old css/js files -->
-  <!-- <script src="main.js"></script> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" /> -->
 </head>
 
 <body>
@@ -42,13 +39,17 @@
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :6 " == '/about' %}active{% endif %}" href="{% url 'blog:about' %}">About</a>
         </li>
+        {% comment %}
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :9 " == '/projects' %}active{% endif %}" href="{% url 'blog:projects' %}">Projects
             <span class="sr-only">(current)</span>
           </a>
-        </li>
+        </li> {% endcomment %}
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog:posts' %}">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path|slice:" :8 " == '/contact' %}active{% endif %}" href="{% url 'blog:contact' %}">Contact</a>
         </li>
       </ul>
     </div>
@@ -67,7 +68,46 @@
   <!-- /.container -->
   {% endblock %} 
   
-  {% block footer %} {% endblock %}
+  {% block footer %}
+  <hr>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://facebook.com/valeriykundas">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright © Your Website 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  {% endblock %}
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -75,10 +115,11 @@
   <script src="{% static 'blog/bootstrap_files/jquery-3.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script>
-    window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+ window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js">< \/script>')
   </script>
   <script src="{% static 'blog/bootstrap_files/popper.js' %}"></script>
   <script src="{% static 'blog/bootstrap_files/bootstrap.js' %}"></script>
-</body>
 
+  {% block custom_js %}{% endblock %}
+</body>
 </html>
