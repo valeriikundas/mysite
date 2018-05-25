@@ -11,17 +11,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="http://m95083xs.beget.tech/wp-content/uploads/2017/04/vk-1-300x300.jpg">
+  <link rel="icon" href="https://getbootstrap.com/favicon.ico">
 
   <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet"> 
-  
-  <!-- Bootstrap template for blog -->
-  <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet">
 
-  {% block custom_head %}{% endblock %}
+  <!-- Bootstrap template for blog -->
+  <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet"> {% block custom_head %}{% endblock %}
 
 </head>
 
@@ -55,9 +53,7 @@
       </ul>
     </div>
   </nav>
-  {% endblock %} 
-  
-  {% block content %}
+  {% endblock %} {% block content %}
   <main role="main" class="container">
     <div class="starter-template">
       <h1>Bootstrap starter template</h1>
@@ -67,22 +63,21 @@
 
   </main>
   <!-- /.container -->
-  {% endblock %} 
-  
-  {% block footer %}
+  {% endblock %} {% block footer %}
   <hr>
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <br><br>
-        <p class="copyright text-muted">Copyright © Valeriy Kundas 2018</p>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <br>
+          <br>
+          <p class="copyright text-muted">Copyright © Valeriy Kundas 2018</p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-{% endblock %}
+  </footer>
+  {% endblock %}
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
