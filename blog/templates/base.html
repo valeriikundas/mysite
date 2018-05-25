@@ -11,14 +11,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+  <link rel="icon" href="http://m95083xs.beget.tech/wp-content/uploads/2017/04/vk-1-300x300.jpg">
 
   <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet"> 
   
-   <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet">
+  <!-- Bootstrap template for blog -->
+  <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet">
 
   {% block custom_head %}{% endblock %}
 
@@ -75,48 +76,19 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
-          <li class="list-inline-item">
-            <a href="#">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://facebook.com/valeriykundas">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-        </ul>
-        <p class="copyright text-muted">Copyright © Your Website 2018</p>
+        <br><br>
+        <p class="copyright text-muted">Copyright © Valeriy Kundas 2018</p>
       </div>
     </div>
   </div>
 </footer>
-
-  {% endblock %}
+{% endblock %}
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="{% static 'blog/bootstrap_files/jquery-3.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script>
- window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js">< \/script>')
-  </script>
   <script src="{% static 'blog/bootstrap_files/popper.js' %}"></script>
   <script src="{% static 'blog/bootstrap_files/bootstrap.js' %}"></script>
 

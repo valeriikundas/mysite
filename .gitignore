@@ -1,4 +1,5 @@
 */secret_settings.py
+*.zip
 venv/
 .vscode
 

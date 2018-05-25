@@ -7,7 +7,8 @@ from .models import Post
 # Create your views here.
 
 def posts(request):
-    return render(request, 'blog/posts.html', {'posts': Post.objects.order_by('-publication_date')})
+    return render(request, 'blog/posts_new.html', {'posts': Post.objects.order_by('-publication_date')})
+    # return render(request, 'blog/posts.html', {'posts': Post.objects.order_by('-publication_date')})
 
 def about(request):
     return render(request, 'blog/about.html')
