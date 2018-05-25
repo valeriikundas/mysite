@@ -5,11 +5,11 @@ from . import views
 
 app_name = 'blog'
 urlpatterns = [
-    # path('bootstrap/', views.bootstrap, name='bootstrap'),
-    path('about/', views.about, name='about'),
+    path('about/', views.AboutView.as_view(), name='about'),
+    #path('about/', views.about, name='about'),
     # path('projects/', views.projects, name='projects'),
-    path('posts/', views.posts, name='posts'),
+    path('posts/', views.PostsView.as_view(), name='posts'),
     path('contact/', views.contact, name='contact'),
-    path('post/<int:post_id>', views.post, name='post'),
-    path('', views.main, name='main'),
+    path('post/<int:pk>', views.PostView.as_view(), name='post'),
+    path('', views.MainView.as_view(), name='main'),
 ]
