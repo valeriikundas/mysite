@@ -24,8 +24,8 @@ class PostView(generic.DetailView):
         return Post.objects.filter(publication_date__lte=timezone.now())
 
 
-def post(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
+def post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
     post.views_count += 1
     post.save()
     return render(request, 'blog/post.html', {'post': post})

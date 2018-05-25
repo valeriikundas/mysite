@@ -1,0 +1,17 @@
+Admin page:
+    ☐ customize admin
+    ☐ remove 'views_count'
+    ✔ add 'tags' @done (5/26/2018, 1:11:02 AM)
+    ☐ change 'author' to 'user' @today 
+Tags:
+    ☐ learn to 'inlines' @today 
+    ☐ add few tags to posts @today 
+    ☐ filter by tags
+    ☐ redo 'tags' to 'manytomanyfield' @today 
+Contact:
+    ☐ make 'send email' work
+    ✔ done @done (5/25/2018, 11:43:54 PM)
+Posts:
+    ☐ add pagination 'paginate by'
+Post:
+    ☐ increment 'views_count' in class-based view

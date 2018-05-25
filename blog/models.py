@@ -12,19 +12,25 @@ class Post(models.Model):
     publication_date = models.DateTimeField(
         'date published', blank=True, null=True)
     views_count = models.IntegerField(default=0, blank=True)
-    tags = models.ForeignKey(
-        'Tag', on_delete=models.CASCADE, null=True, blank=True)
     image_url = models.URLField(blank=True)
+    tags = models.ManyToManyField('Tag', blank=True)
 
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ('title',)
+
     def is_published(self):
-        return self.publication_date >= timezone.now()
+        return self.publication_date != None and self.publication_date <= timezone.now()
+    is_published.boolean = True
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ('name',)
