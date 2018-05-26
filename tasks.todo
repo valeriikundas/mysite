@@ -3,8 +3,10 @@ Admin page:
     ☐ remove 'views_count'
     ✔ add 'tags' @done (5/26/2018, 1:11:02 AM)
     ☐ change 'author' to 'user' @today 
+           https://docs.djangoproject.com/en/2.0/topics/auth/
 Tags:
     ☐ learn to 'inlines' @today 
+          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
     ☐ add few tags to posts @today 
     ☐ filter by tags
     ☐ redo 'tags' to 'manytomanyfield' @today 
@@ -19,3 +21,4 @@ Posts:
           https://docs.djangoproject.com/en/2.0/topics/pagination/
 Post:
     ☐ increment 'views_count' in class-based view
+        https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#performing-extra-work
