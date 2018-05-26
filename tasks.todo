@@ -7,6 +7,8 @@ Admin page:
 Tags:
     ☐ learn to 'inlines' @today 
           https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
+          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin
+          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_formsets_with_inlines
     ☐ add few tags to posts @today 
     ☐ filter by tags
     ☐ redo 'tags' to 'manytomanyfield' @today 
