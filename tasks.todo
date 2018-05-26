@@ -4,6 +4,8 @@ Admin page:
     ✔ add 'tags' @done (5/26/2018, 1:11:02 AM)
     ☐ change 'author' to 'user' @today 
            https://docs.djangoproject.com/en/2.0/topics/auth/
+     . Add publish button
+           https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
 Tags:
     ☐ learn to 'inlines' @today 
           https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
