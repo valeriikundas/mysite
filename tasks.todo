@@ -8,10 +8,14 @@ Tags:
     ☐ add few tags to posts @today 
     ☐ filter by tags
     ☐ redo 'tags' to 'manytomanyfield' @today 
+          https://docs.djangoproject.com/en/2.0/topics/db/models/#many-to-many-relationships
 Contact:
-    ☐ make 'send email' work
+    ☐ make 'send email' work 
+          https://docs.djangoproject.com/en/2.0/topics/forms/ 
+          https://docs.djangoproject.com/en/2.0/topics/email/
     ✔ done @done (5/25/2018, 11:43:54 PM)
 Posts:
-    ☐ add pagination 'paginate by'
+    ☐ add pagination 'paginate by' 
+          https://docs.djangoproject.com/en/2.0/topics/pagination/
 Post:
     ☐ increment 'views_count' in class-based view
