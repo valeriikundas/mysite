@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import generic
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 from .models import Post
 
@@ -20,27 +21,35 @@ class PostView(generic.DetailView):
     model = Post
     template_name = 'blog/post.html'
 
+    def get_object(self):
+        object = super().get_object()
+        object.views_count += 1
+        object.save()
+        return object
+
     def get_queryset(self):
         return Post.objects.filter(publication_date__lte=timezone.now())
 
 
-def post(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    post.views_count += 1
-    post.save()
-    return render(request, 'blog/post.html', {'post': post})
-
-
 class PostsView(generic.ListView):
+    model = Post
     template_name = 'blog/posts.html'
     context_object_name = 'posts'
-    model = Post
+    queryset = Post.objects.filter(
+        publication_date__lte=timezone.now()).order_by('-publication_date')
+    paginate_by = 2
 
-    def get_queryset(self):
-        """
-        return the last 3 published posts
-        """
-        return Post.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')[:5]
+
+def posts(request):
+    #posts = Post.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')
+    posts = Post.objects.all()
+    page = request.GET.get('page', 1)
+    #page = 2
+
+    paginator = Paginator(posts, 2)
+    posts = paginator.get_page(page)
+
+    return render(request, 'blog/posts.html', {'posts': posts})
 
 
 def projects(request):

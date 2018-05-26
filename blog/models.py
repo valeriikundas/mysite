@@ -21,6 +21,9 @@ class Post(models.Model):
     class Meta:
         ordering = ('title',)
 
+    def publish(self):
+        self.publication_date = timezone.now()
+
     def is_published(self):
         return self.publication_date != None and self.publication_date <= timezone.now()
     is_published.boolean = True

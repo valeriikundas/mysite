@@ -1,28 +1,18 @@
 Admin page:
     ☐ customize admin
-    ☐ remove 'views_count'
+    ✔ remove 'views_count' @done (2018-5-26 17:54:20)
     ✔ add 'tags' @done (5/26/2018, 1:11:02 AM)
-    ☐ change 'author' to 'user' @today 
-           https://docs.djangoproject.com/en/2.0/topics/auth/
-     . Add publish button
-           https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
+    ☐ change 'author' to 'user' https://docs.djangoproject.com/en/2.0/topics/auth/
+    ☐ Add publish button https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
 Tags:
-    ☐ learn to 'inlines' @today 
-          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/
-          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin
-          https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_formsets_with_inlines
-    ☐ add few tags to posts @today 
-    ☐ filter by tags
-    ☐ redo 'tags' to 'manytomanyfield' @today 
-          https://docs.djangoproject.com/en/2.0/topics/db/models/#many-to-many-relationships
+    ☐ learn to 'inlines' https://docs.djangoproject.com/en/2.0/ref/contrib/admin/ https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_formsets_with_inlines
+    ✔ add few tags to posts @today @done (2018-5-26 17:39:42)
+    ✔ filter by tags @done (2018-5-26 17:39:45)
+    ✔ redo 'tags' to 'manytomanyfield' @today @critical @done (2018-5-26 17:53:01) https://docs.djangoproject.com/en/2.0/topics/db/models/#many-to-many-relationships
 Contact:
-    ☐ make 'send email' work 
-          https://docs.djangoproject.com/en/2.0/topics/forms/ 
-          https://docs.djangoproject.com/en/2.0/topics/email/
+    ☐ make 'send email' work https://docs.djangoproject.com/en/2.0/topics/forms/ https://docs.djangoproject.com/en/2.0/topics/email/
     ✔ done @done (5/25/2018, 11:43:54 PM)
 Posts:
-    ☐ add pagination 'paginate by' 
-          https://docs.djangoproject.com/en/2.0/topics/pagination/
+    ☐ add pagination 'paginate by' https://docs.djangoproject.com/en/2.0/topics/pagination/ @today 
 Post:
-    ☐ increment 'views_count' in class-based view
-        https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#performing-extra-work
+    ✔ increment 'views_count' in class-based view @done (2018-5-26 17:39:29) https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#performing-extra-work

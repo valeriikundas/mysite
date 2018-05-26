@@ -38,15 +38,12 @@
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :6 " == '/about' %}active{% endif %}" href="{% url 'blog:about' %}">About</a>
         </li>
-        {% comment %}
+         {% comment %}
         <li class="nav-item">
-          <a class="nav-link {% if request.path|slice:" :9 " == '/projects' %}active{% endif %}" href="{% url 'blog:projects' %}">Projects
-            <span class="sr-only">(current)</span>
-          </a>
-        </li> {% endcomment %}
-        <li class="nav-item">
-          <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog:posts' %}">Posts</a>
+          <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog posts' %}">Posts</a>
         </li>
+        {% endcomment %}
+        
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :8 " == '/contact' %}active{% endif %}" href="{% url 'blog:contact' %}">Contact</a>
         </li>
@@ -89,4 +86,5 @@
 
   {% block custom_js %}{% endblock %}
 </body>
+
 </html>

@@ -8,9 +8,11 @@ urlpatterns = [
     path('about/', views.AboutView.as_view(), name='about'),
     #path('about/', views.about, name='about'),
     # path('projects/', views.projects, name='projects'),
-    path('posts/', views.PostsView.as_view(), name='posts'),
+    
+    path('posts_c/', views.PostsView.as_view(), name='posts_c'),
+    path('posts/', views.posts, name='posts'),
+
     path('contact/', views.contact, name='contact'),
-    #path('post/<int:pk>', views.PostView.as_view(), name='post'),
-    path('post/<int:pk>', views.post, name='post'),
+    path('post/<int:pk>', views.PostView.as_view(), name='post'),
     path('', views.MainView.as_view(), name='main'),
 ]
