@@ -1,3 +1,4 @@
+temp/
 */secret_settings.py
 *.zip
 venv/

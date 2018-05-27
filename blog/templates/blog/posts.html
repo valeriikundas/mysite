@@ -1,12 +1,18 @@
-{% extends 'base.html' %} {% load static %} {% block title %}Posts{% endblock %} {% block custom_head %}
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %}Posts{% endblock %} 
+
+{% block custom_head %}
+<link href="{% static 'blog/posts_files/css/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="{% static 'blog/posts_files/css/blog-home.css' %}" rel="stylesheet"> {% endblock %} {% block content %}
+<link href="{% static 'blog/posts_files/css/blog-home.css' %}" rel="stylesheet"> 
+{% endblock %} 
 
+{% block content %}
 <!-- Page Content -->
 <div class="container">
-
   <div class="row">
 
     <!-- Blog Entries Column -->
@@ -26,7 +32,8 @@
         </div>
       </main>
       <!-- /.container -->
-      {% else %} {% for post in posts %}
+      {% else %} 
+      {% for post in object_list %}
       <div class="card mb-4">
         <img class="card-img-top" src="{{ post.image_url }}">
         <div class="card-body">
@@ -40,19 +47,22 @@
         </div>
       </div>
       {% endfor %}
+      {% endif %}
 
       <!-- Pagination -->
       <ul class="pagination justify-content-center mb-4">
-        <b>{{ posts.number }}</b>
-        <li class="page-item">
-          <a class="page-link" href="?page={{ posts.previous_page_number }}">&larr; Older</a>
+        {% if page_obj.has_previous %}
+        <li class="page-item ">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&larr; Older</a>
         </li>
-        <li class="page-item disabled">
-          <a class="page-link" href="?page={{ posts.next_page_number }}">Newer &rarr;</a>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li class="page-item ">
+          <!-- class 'disabled' disables the button-->
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}">Newer &rarr;</a>
         </li>
+        {% endif %}
       </ul>
-      {% endif%}
-
     </div>
 
     <!-- Sidebar Widgets Column -->
@@ -123,7 +133,9 @@
 </div>
 <!-- /.container -->
 
-{% endblock %} {% block custom_js %}
+{% endblock %} 
+
+{% block custom_js %}
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> {% endblock %}
+<script src="{% static 'blog/posts_files/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'blog/posts_files/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script> {% endblock %}

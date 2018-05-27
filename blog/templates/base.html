@@ -33,17 +33,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :6 " == '/about' %}active{% endif %}" href="{% url 'blog:about' %}">About</a>
         </li>
-         {% comment %}
         <li class="nav-item">
-          <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog posts' %}">Posts</a>
+          <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog:posts' %}">Posts</a>
         </li>
-        {% endcomment %}
-        
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :8 " == '/contact' %}active{% endif %}" href="{% url 'blog:contact' %}">Contact</a>
         </li>
@@ -74,17 +71,7 @@
       </div>
     </div>
   </footer>
-  {% endblock %}
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="{% static 'blog/bootstrap_files/jquery-3.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="{% static 'blog/bootstrap_files/popper.js' %}"></script>
-  <script src="{% static 'blog/bootstrap_files/bootstrap.js' %}"></script>
-
-  {% block custom_js %}{% endblock %}
+  {% endblock %} {% block custom_js %}{% endblock %}
 </body>
 
 </html>
