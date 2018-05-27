@@ -30,28 +30,13 @@ class PostView(generic.DetailView):
     def get_queryset(self):
         return Post.objects.filter(publication_date__lte=timezone.now())
 
-
 class PostsView(generic.ListView):
     model = Post
     template_name = 'blog/posts.html'
     context_object_name = 'posts'
     queryset = Post.objects.filter(
         publication_date__lte=timezone.now()).order_by('-publication_date')
-    paginate_by = 1
-
-
-'''
-def posts(request):
-    #posts = Post.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')
-    posts = Post.objects.all()
-    page = request.GET.get('page', 1)
-    #page = 2
-
-    paginator = Paginator(posts, 2)
-    posts = paginator.get_page(page)
-
-    return render(request, 'blog/posts.html', {'posts': posts})
-'''
+    paginate_by = 3
 
 
 def projects(request):
