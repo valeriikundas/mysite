@@ -13,7 +13,6 @@ Contact:
     ☐ make 'send email' work 
         https://docs.djangoproject.com/en/2.0/topics/forms/ https://docs.djangoproject.com/en/2.0/topics/email/
 Posts:
-    ☐ add pagination 'paginate by' https://docs.djangoproject.com/en/2.0/topics/pagination/ @today 
 
 Post:
 
@@ -27,3 +26,4 @@ Archive:
  ✔ filter by tags @done (2018-5-26 17:39:45) @project(Tags)
  ✔ add few tags to posts @today @done (2018-5-26 17:39:42) @project(Tags)
  ✔ increment 'views_count' in class-based view @done (2018-5-26 17:39:29) https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-display/#performing-extra-work @project(Post)
+ ✔ add pagination 'paginate by' https://docs.djangoproject.com/en/2.0/topics/pagination/ @today @done (18-05-27 22:39) @project(Posts)

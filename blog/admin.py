@@ -2,17 +2,6 @@ from django.contrib import admin
 
 from .models import Post, Tag
 
-# Register your models here.
-
-
-# class TagInline(admin.TabularInline):
-#   model = Tag
-#  extra = 2
-
-#class TagInline(admin.TabularInline):
-#    model = Tag.
-
-
 
 class PostAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -25,6 +14,13 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ['publication_date', 'author', 'tags']
     search_fields = ['title', 'author', 'text']
 
+class TagAdmin(admin.ModelAdmin):
+	def get_model_perms(self, request):
+		"""
+		needed to hide model from admin page
+		"""
+		return {}
+
 
 admin.site.register(Post, PostAdmin)
-admin.site.register(Tag)
+admin.site.register(Tag, TagAdmin)
