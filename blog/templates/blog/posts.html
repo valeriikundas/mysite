@@ -42,7 +42,7 @@
           <a href="{% url 'blog:post' post.id %}" class="btn btn-primary">Read More &rarr;</a>
         </div>
         <div class="card-footer text-muted">
-          Posted on January 1, 2017 by
+          Posted on {{ post.publication_date|date:"M d, Y" }} by
           <a href="#">{{ post.author }}</a>
         </div>
       </div>
