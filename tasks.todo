@@ -1,16 +1,16 @@
 Admin page:
-    ☐ customize admin
-    ☐ change 'author' to 'user' 
+    ✔ customize admin @done (5/28/2018, 5:44:13 PM)
+    ✔ change 'author' to 'user' @done (5/28/2018, 5:02:40 PM)
         https://docs.djangoproject.com/en/2.0/topics/auth/
     ☐ Add publish button 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
 Tags:
-    ☐ learn to 'inlines' 
+    ✔ learn to 'inlines' @done (5/28/2018, 5:44:44 PM)
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/ 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_formsets_with_inlines
 Contact:
-    ☐ make 'send email' work 
+    ☐ make 'send email' work
         https://docs.djangoproject.com/en/2.0/topics/forms/ https://docs.djangoproject.com/en/2.0/topics/email/
 Posts:
 

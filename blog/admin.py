@@ -9,8 +9,8 @@ class PostAdmin(admin.ModelAdmin):
         ('When to publish', {'fields': ['publication_date']}),
     ]
     list_display = ('title', 'author', 'is_published', 'publication_date')
-    list_filter = ['publication_date', 'author', 'tags']
-    search_fields = ['title', 'author', 'text']
+    list_filter = ['publication_date', 'tags']
+    search_fields = ['title', 'author__username', 'text']
     filter_horizontal = ('tags',)
     
 
