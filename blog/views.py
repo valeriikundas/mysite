@@ -30,13 +30,14 @@ class PostView(generic.DetailView):
     def get_queryset(self):
         return Post.objects.filter(publication_date__lte=timezone.now())
 
+
 class PostsView(generic.ListView):
     model = Post
     template_name = 'blog/posts.html'
     context_object_name = 'posts'
     queryset = Post.objects.filter(
         publication_date__lte=timezone.now()).order_by('-publication_date')
-    paginate_by = 3
+    paginate_by = 10
 
 
 def projects(request):
