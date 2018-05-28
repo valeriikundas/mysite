@@ -1,8 +1,14 @@
 from django.shortcuts import render, get_object_or_404
+from django.conf import settings
+from django.shortcuts import redirect
 from django.core.paginator import Paginator
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.utils import timezone
+from django.contrib.auth.models import User
 from django.views import generic
+from django.views.defaults import page_not_found
 
 from .models import Post
 
@@ -11,8 +17,20 @@ class AboutView(generic.TemplateView):
     template_name = 'blog/about.html'
 
 
-class MainView(generic.TemplateView):
-    template_name = 'blog/main.html'
+# @login_required
+def main(request):
+    if not request.user.is_authenticated:
+        #return page_not_found(request, "LOL:)")
+        return redirect('{0}?next={1}'.format(settings.LOGIN_URL, request.path))
+
+    #username = request.POST['username']
+    #password = request.POST['password']
+    #user = authenticate(request, username=username, password=password)
+    #user = User.objects.all()[0]
+    #if user:
+        #login(request, user)
+
+    return render(request, "blog/main.html")
 
 
 class PostView(generic.DetailView):

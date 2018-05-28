@@ -10,5 +10,6 @@ urlpatterns = [
     path('posts/', views.PostsView.as_view(), name='posts'),
     path('contact/', views.contact, name='contact'),
     path('post/<int:pk>', views.PostView.as_view(), name='post'),
-    path('', views.MainView.as_view(), name='main'),
+    path('', views.main, name='main'),
+    #path('', views.MainView.as_view(), name='main'),
 ]
