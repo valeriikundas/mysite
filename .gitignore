@@ -1,3 +1,4 @@
+staticfiles
 scripts/
 */secret_settings.py
 *.zip
