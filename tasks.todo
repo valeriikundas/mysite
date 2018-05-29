@@ -13,8 +13,15 @@ Contact:
     ☐ make 'send email' work
         https://docs.djangoproject.com/en/2.0/topics/forms/ https://docs.djangoproject.com/en/2.0/topics/email/
 Posts:
-
+    ☐ log in
+    ☐ beautifying text
+    ☐ 'what i'm doing now' page
 Post:
+    add 'Comment' model
+Test:
+    views
+    models
+    
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
