@@ -1,15 +1,11 @@
 Admin page:
     ✔ customize admin @done (5/28/2018, 5:44:13 PM)
     ✔ change 'author' to 'user' @done (5/28/2018, 5:02:40 PM)
-        https://docs.djangoproject.com/en/2.0/topics/auth/
     ☐ Add publish button 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
 Tags:
-    filter by tags
+    ☐ filter by tags
     ✔ learn to 'inlines' @done (5/28/2018, 5:44:44 PM)
-        https://docs.djangoproject.com/en/2.0/ref/contrib/admin/ 
-        https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin 
-        https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.ModelAdmin.get_formsets_with_inlines
 Contact:
     ☐ make 'send email' work
         https://docs.djangoproject.com/en/2.0/topics/forms/ https://docs.djangoproject.com/en/2.0/topics/email/
@@ -17,20 +13,20 @@ Posts:
     ☐ log in
     ☐ beautifying text
     ☐ 'what i'm doing now' page https://zenhabits.net/now/
-    best year ever https://zenhabits.net/best-year/
+    ☐ best year ever https://zenhabits.net/best-year/
 Post:
-    add 'Comment' model
+    ☐ add 'Comment' model
 Test:
-    views
-    models
+    ☐ views
+    ☐ models
 Notes:
-    add 'notes' model
-    add notes template
-    add notes views
+    ☐ add 'notes' model
+    ☐ add notes template
+    ☐ add notes views
 Templates:
-    merge bootstrap files
-    merge jquery files
-    merge custom css files
+    ☐ merge bootstrap files
+    ☐ merge jquery files
+    ☐ merge custom css files
     
     
 
