@@ -5,6 +5,7 @@ Admin page:
     ☐ Add publish button 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#overriding-admin-templates
 Tags:
+    filter by tags
     ✔ learn to 'inlines' @done (5/28/2018, 5:44:44 PM)
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/ 
         https://docs.djangoproject.com/en/2.0/ref/contrib/admin/#django.contrib.admin.InlineModelAdmin 
@@ -15,12 +16,22 @@ Contact:
 Posts:
     ☐ log in
     ☐ beautifying text
-    ☐ 'what i'm doing now' page
+    ☐ 'what i'm doing now' page https://zenhabits.net/now/
+    best year ever https://zenhabits.net/best-year/
 Post:
     add 'Comment' model
 Test:
     views
     models
+Notes:
+    add 'notes' model
+    add notes template
+    add notes views
+Templates:
+    merge bootstrap files
+    merge jquery files
+    merge custom css files
+    
     
 
 
