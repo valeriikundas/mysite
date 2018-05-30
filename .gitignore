@@ -1,9 +1,3 @@
-*/settings/prod.py
-staticfiles
-scripts/
-*/secret_settings.py
-*.zip
-venv/
 .vscode
 
 # Thumbnails
