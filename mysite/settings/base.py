@@ -24,7 +24,7 @@ SECRET_KEY = 'fj6z7&!wn0tsn2pf!#9wqu08$a=*a+oc%tt46u&&5wfdb_tgou'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'thegreatest.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -75,16 +75,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'db_mysite',
-        'NAME': 'd62r1j5m7aq6t2',
-        #'USER': 'postgres',
-        'USER': 'tueabssgdrsmnp',
-        #'PASSWORD': 'password',
-        'PASSWORD': '82fd57f56d30ac67b49bab9ae7b55c64a6323c359abe786561999f831db76037',
-        #'HOST': '127.0.0.1',
-        'HOST': 'ec2-54-235-206-118.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     },
 }
 

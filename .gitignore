@@ -1,3 +1,4 @@
+*/settings/prod.py
 staticfiles
 scripts/
 */secret_settings.py
