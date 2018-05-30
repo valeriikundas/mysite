@@ -2,8 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<script type="text/javascript" charset="utf-8" id="zm-extension" src="{% static 'blog/bootstrap_files/webrtc-patch.js' %}"
-  async=""></script>
+
 
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -16,10 +15,10 @@
   <title>{% block title %}{% endblock %}</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="{% static 'blog/bootstrap_files/bootstrap.css' %}" rel="stylesheet">
+  <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Bootstrap template for blog -->
-  <link href="{% static 'blog/bootstrap_files/starter-template.css' %}" rel="stylesheet"> {% block custom_head %}{% endblock %}
+  <link href="{% static 'blog/css/starter-template.css' %}" rel="stylesheet"> {% block custom_head %}{% endblock %}
 
 </head>
 
@@ -71,9 +70,7 @@
       </div>
     </div>
   </footer>
-  {% endblock %} 
-  
-  {% block custom_js %}{% endblock %}
+  {% endblock %}
 </body>
 
 </html>
