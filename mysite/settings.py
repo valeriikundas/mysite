@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'db_mysite',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     },
 }
 
@@ -118,7 +122,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'  # folder in each app where django will look for static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # an empty folder where 'collectstatic' will put static files
-
-STATICFILES_DIRS = (os.path.join(BASE_DIR), 'static') # folder in project(not app) where django will look for static files
+STATIC_URL = '/static/'  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
