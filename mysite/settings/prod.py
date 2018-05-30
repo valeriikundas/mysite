@@ -4,7 +4,7 @@ from mysite.settings.base import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://thegreatest.herokuapp.com/']
+ALLOWED_HOSTS = ['thegreatest.herokuapp.com']
 
 DATABASES = {
     'default': {
