@@ -2,7 +2,7 @@ from mysite.settings.base import *
 
 # override settings for production
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://thegreatest.herokuapp.com/']
 
