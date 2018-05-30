@@ -16,3 +16,5 @@ DATABASES = {
         'PORT': '5432',
     },
 }
+
+SECRET_KEY = "SLUJ3p*rx_6UTa*?A2*YJmDv2C*j_e_z+8EXw+-XM&mmqcB%*PJLVR=bDu@tdYsgJaRMZ%F89&uQv_N-QcA=kQ6mEbrYhA?ZwkbBhz7&AuWxVD88qjF$-7z_&XvWAG!GT_Eq3YWgE^e!ds59V7Pu2mxkkXh#wwPFCsJFK58FX3BV?J2mqG%$LSKN&cNtKKmF%K85tarcWh2336Azu4+k@-D@9=zfdA!t$p@!F9Xsh@W+96#j35m%H+zHEkFFmn@Q"
