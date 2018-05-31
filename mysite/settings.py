@@ -1,3 +1,5 @@
+# export PATH="/home/valeriikundas/.local/bin:$PATH"
+
 """
 Django settings for mysite project.
 
@@ -40,7 +42,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'db_mysite',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
+        'NAME': 'mysite', #database name
+        'USER': 'valeriidb', # user name in ubuntu/postgresql
+        'PASSWORD': 'password', # user password
         'HOST': '127.0.0.1',
         'PORT': '5432',
     },
