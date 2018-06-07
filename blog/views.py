@@ -19,15 +19,15 @@ class AboutView(generic.TemplateView):
 
 # @login_required
 def main(request):
-    #if not request.user.is_authenticated:
-        #return page_not_found(request, "LOL:)")
+    # if not request.user.is_authenticated:
+        # return page_not_found(request, "LOL:)")
      #   return redirect('{0}?next={1}'.format(settings.LOGIN_URL, request.path))
 
     #username = request.POST['username']
     #password = request.POST['password']
     #user = authenticate(request, username=username, password=password)
     #user = User.objects.all()[0]
-    #if user:
+    # if user:
         #login(request, user)
 
     return render(request, "blog/main.html")
