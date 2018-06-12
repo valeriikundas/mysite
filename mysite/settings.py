@@ -26,7 +26,7 @@ SECRET_KEY = 'fj6z7&!wn0tsn2pf!#9wqu08$a=*a+oc%tt46u&&5wfdb_tgou'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'thegreatest.herokuapp.com']
 
 
 # Application definition
@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mysite', #database name
-        'USER': 'valeriidb', # user name in ubuntu/postgresql
-        'PASSWORD': 'password', # user password
+        'NAME': 'mysite',  # database name
+        'USER': 'valeriidb',  # user name in ubuntu/postgresql
+        'PASSWORD': 'password',  # user password
         'HOST': '127.0.0.1',
         'PORT': '5432',
     },
