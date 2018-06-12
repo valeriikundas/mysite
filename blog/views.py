@@ -48,8 +48,9 @@ class PostView(generic.DetailView):
 
 
 class PostsView(generic.ListView):
-    model = Post
     template_name = 'blog/posts.html'
+    model = Post
+
     context_object_name = 'posts'
     queryset = Post.objects.filter(
         publication_date__lte=timezone.now()).order_by('-publication_date')
