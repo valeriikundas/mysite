@@ -13,8 +13,8 @@ from django.views.defaults import page_not_found
 from .models import Post
 
 
-class AboutView(generic.TemplateView):
-    template_name = 'blog/about.html'
+class NowView(generic.TemplateView):
+    template_name = 'blog/now.html'
 
 
 # @login_required
@@ -30,7 +30,7 @@ def main(request):
     # if user:
         #login(request, user)
 
-    return render(request, "blog/main.html")
+    return render(request, "blog/about.html")
 
 
 class PostView(generic.DetailView):

@@ -18,7 +18,7 @@
   <link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
 
   <!-- Bootstrap template for blog -->
-  <link href="{% static 'blog/css/starter-template.css' %}" rel="stylesheet"> {% block custom_head %}{% endblock %}
+  <link href="{% static 'blog/css/site-template.css' %}" rel="stylesheet"> {% block custom_head %}{% endblock %}
 
 </head>
 
@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link {% if request.path|slice:" :6 " == '/about' %}active{% endif %}" href="{% url 'blog:about' %}">About</a>
+          <a class="nav-link {% if request.path|slice:" :4 " == '/now' %}active{% endif %}" href="{% url 'blog:now' %}">Now</a>
         </li>
         <li class="nav-item">
           <a class="nav-link {% if request.path|slice:" :6 " == '/posts' %}active{% endif %}" href="{% url 'blog:posts' %}">Posts</a>
@@ -48,7 +48,7 @@
   </nav>
   {% endblock %} {% block content %}
   <main role="main" class="container">
-    <div class="starter-template">
+    <div class="site-template">
       <h1>Bootstrap starter template</h1>
       <p class="lead">Use this document as a way to quickly start any new project.
         <br> All you get is this text and a mostly barebones HTML document.</p>

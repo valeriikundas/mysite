@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block custom_head %}
+<style>
+    main a {
+        text-decoration: underline;
+        color: #000000;
+    }
+</style>
+{% endblock %} {% block title %}About me{% endblock %} {% block content %}
+
+<main role="main" class="container" style="margin: auto; width:30%; height: 300px">
+    <br>
+    <span class="lead">What I am doing now:</span>
+    <br>
+    <ul>
+        <li>Studying:
+            <a href="http://cs231n.stanford.edu/">cs231n</a>,
+            <a href="https://www.youtube.com/playlist?list=PLrCZzMib1e9pg7ZLIOhmGSlmkMf8yEOLZ">Django</a>,
+            <a href="https://www.commonlounge.com/discussion/5d2822257dfa49328d85fd27cf114441">algorithms</a>
+        </li>
+        <li>Doing sports: running, pull ups, martial arts</li>
+        <li>Meditation</li>
+        <li>Socializing</li>
+        <li>Sleeping</li>
+    </ul>
+    <br>
+    <span style="font-size: 80%">Last update: June 23, 2018</span>
+</main>
+{% endblock %} {% block active_about %}active{% endblock %}

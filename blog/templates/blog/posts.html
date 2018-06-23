@@ -1,15 +1,7 @@
-{% extends 'base.html' %} 
-{% load static %} 
-
-{% block title %}Posts{% endblock %} 
-
-{% block custom_head %}
+{% extends 'base.html' %} {% load static %} {% block title %}Posts{% endblock %} {% block custom_head %}
 
 <!-- Custom styles for this template -->
-<link href="{% static 'blog/css/blog-home.css' %}" rel="stylesheet"> 
-{% endblock %} 
-
-{% block content %}
+<link href="{% static 'blog/css/blog-home.css' %}" rel="stylesheet"> {% endblock %} {% block content %}
 <!-- Page Content -->
 <div class="container">
   <div class="row">
@@ -25,14 +17,13 @@
       {% if not posts %}
       <main role="main" class="container">
 
-        <div class="starter-template">
+        <div class="site-template">
           <br>
           <p class="lead">There are no posts yet...</p>
         </div>
       </main>
       <!-- /.container -->
-      {% else %} 
-      {% for post in object_list %}
+      {% else %} {% for post in object_list %}
       <div class="card mb-4">
         <img class="card-img-top" src="{{ post.image_url }}">
         <div class="card-body">
@@ -45,8 +36,7 @@
           <a href="#">{{ post.author }}</a>
         </div>
       </div>
-      {% endfor %}
-      {% endif %}
+      {% endfor %} {% endif %}
 
       <!-- Pagination -->
       <ul class="pagination justify-content-center mb-4">
@@ -127,5 +117,4 @@
 </div>
 <!-- /.container -->
 
-{% endblock %} 
-
+{% endblock %}
